@@ -6,7 +6,7 @@ export const formData = [
     fields: [
       {
         component: "text",
-        label: "First Name",
+        label: "First Name", 
         type: "text",
         _uid: "5b9b79d2-32f2-42a1-b89f-203dfc0b6b98",
       },
