@@ -1,0 +1,10 @@
+.btn-submit{
+    box-sizing: border-box;
+    border-radius: 50px;
+    color: white;
+    box-shadow: -1px 6px 10px 0 rgb(120 60 20 / 20%);
+    color: white;
+    border: unset;
+    background: #ff8a00;
+    padding: 8px 40px;
+}

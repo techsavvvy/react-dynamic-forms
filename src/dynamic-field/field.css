@@ -1,0 +1,15 @@
+input{
+    margin: 1rem !important;
+}
+.align-label{
+    min-width: 12%;
+    width: 10%;
+    padding: 1rem;
+    font-size: 19px;
+    text-align: left;
+}
+.container{
+    align-items: center;
+    justify-content: center;
+    display: flex !important;
+}
