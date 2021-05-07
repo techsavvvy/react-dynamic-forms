@@ -6,15 +6,15 @@ const FieldGroup = ({ field, fieldChanged, values }) => {
   const fields = field.fields;
 
   return (
-    <fieldset key={field._uid}>
+    <fieldset key={field.uuid}>
       <h3>{field.label}</h3>
       {fields.map((field) => {
         return (
           <Field
-            key={field._uid}
+            key={field.uuid}
             field={field}
             fieldChanged={fieldChanged}
-            value={values[field._uid]}
+            value={values[field.uuid]}
           />
         );
       })}

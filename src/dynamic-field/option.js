@@ -12,11 +12,11 @@ const Options = ({ field, fieldChanged, value }) => {
               <input
                 type="radio"
                 id={option.value}
-                name={field._uid}
+                name={field.uuid}
                 value={option.value}
                 checked={value === option.value}
                 onChange={(e) => {
-                  fieldChanged(field._uid, e.target.value);
+                  fieldChanged(field.uuid, e.target.value);
                 }}
               />
               {option.label}

@@ -17,10 +17,10 @@ const Form = ({ formData }) => {
       const newValues = upcomingPageData.fields.reduce((obj, field) => {
         if (field.component === "field_group") {
           for (const subField of field.fields) {
-            obj[subField._uid] = "";
+            obj[subField.uuid] = "";
           }
         } else {
-          obj[field._uid] = "";
+          obj[field.uuid] = "";
         }
         return obj;
       }, {});
@@ -54,7 +54,7 @@ const Form = ({ formData }) => {
             case "field_group":
               return (
                 <FieldGroup
-                  key={field._uid}
+                  key={field.uuid}
                   field={field}
                   fieldChanged={fieldChanged}
                   values={values}
@@ -63,19 +63,19 @@ const Form = ({ formData }) => {
             case "options":
               return (
                 <Option
-                  key={field._uid}
+                  key={field.uuid}
                   field={field}
                   fieldChanged={fieldChanged}
-                  value={values[field._uid]}
+                  value={values[field.uuid]}
                 />
               );
             default:
               return (
                 <Field
-                  key={field._uid}
+                  key={field.uuid}
                   field={field}
                   fieldChanged={fieldChanged}
-                  value={values[field._uid]}
+                  value={values[field.uuid]}
                 />
               );
           }

@@ -2,37 +2,37 @@ export const formData = [
   {
     component: "page",
     label: "Personal Details",
-    _uid: "0c946643-5a83-4545-baea-055b27b51e8a",
+    uuid: "1233fd6f-6c57-457b-87aa-63ec399178c8",
     fields: [
       {
         component: "text",
         label: "First Name", 
         type: "text", 
-        _uid: "5b9b79d2-32f2-42a1-b89f-203dfc0b6b98",
+        uuid: "43b2628c-cbb3-4974-9bf0-9fda9b97dc6f",
       },
       {
         component: "text",
         label: "Last Name",
         type: "text",
-        _uid: "6eff3638-80a7-4427-b07b-4c1be1c6b186",
+        uuid: "9f5c346e-5278-4f78-899f-3ce7f1dda975",
       },
       {
         component: "text",
         label: "Email",
         type: "email",
-        _uid: "7f885969-f8ba-40b9-bf5d-0d57bc9c6a8d",
+        uuid: "f9d62eba-76a1-405e-ab82-047ee3b8c503",
       },
       {
         component: "text",
         label: "Phone",
         type: "text",
-        _uid: "f61233e8-565e-43d0-9c14-7d7f220c6020",
+        uuid: "62489731-7608-4c0d-8dd1-d58186fd8d75",
       },
       {
         component: "options",
         label: "Gender",
         type: "radio",
-        _uid: "bd90f44a-d479-49ae-ad66-c2c475dca66b",
+        uuid: "7dbca8dc-0806-463b-97da-364d915058be",
         options: [
           {
             component: "option",
@@ -50,7 +50,7 @@ export const formData = [
         component: "text",
         label: "Comments",
         type: "text",
-        _uid: "f61231e8-565e-43d0-9c14-7d7f220c6020",
+        uuid: "f5af1b94-70d6-4818-a901-68fc15c8c9ba",
       },
     ],
   },
