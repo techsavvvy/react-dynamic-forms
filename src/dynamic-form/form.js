@@ -36,9 +36,9 @@ const Form = ({ formData }) => {
       return currentValues;
     });
     // TODO:(sasidharan) Temp removed WIP
-    // setCurrentPageData((currentPageData) => {
-    //   return Object.assign({}, currentPageData);
-    // });
+    setCurrentPageData((currentPageData) => {
+      return Object.assign({}, currentPageData);
+    });
   };
 
 
