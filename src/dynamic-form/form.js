@@ -6,43 +6,44 @@ import './form.css'
 
 const Form = ({ formData }) => {
   const [page] = useState(0);
-  console.log(useState(formData[page]))
   const [currentPageData, setCurrentPageData] = useState(formData[page]);
   const [values, setValues] = useState({});
 
   useEffect(() => {
     const upcomingPageData = formData[page];
     setCurrentPageData(upcomingPageData);
-    setValues((currentValues) => {
-      const newValues = upcomingPageData.fields.reduce((obj, field) => {
-        if (field.component === "field_group") {
-          for (const subField of field.fields) {
-            obj[subField.uuid] = "";
-          }
-        } else {
-          obj[field.uuid] = "";
-        }
-        return obj;
-      }, {});
-      return Object.assign({}, newValues, currentValues);
-    });
+    // TODO:(sasidharan): Work in progress
+    // setValues((currentValues) => {
+    //   const newValues = upcomingPageData.fields.reduce((obj, field) => {
+    //     if (field.component === "field_group") {
+    //       for (const subField of field.fields) {
+    //         obj[subField.uuid] = "";
+    //       }
+    //     } else {
+    //       obj[field.uuid] = "";
+    //     }
+    //     return obj;
+    //   }, {});
+    //   return Object.assign({}, newValues, currentValues);
+    // });
   }, [page, formData]);
 
 
   const fieldChanged = (fieldId, value) => {
     setValues((currentValues) => {
+      // TODO:(Sasidharan) construct a DS to show the response change of each fields
       currentValues[fieldId] = value;
       return currentValues;
     });
-    setCurrentPageData((currentPageData) => {
-      return Object.assign({}, currentPageData);
-    });
+    // TODO:(sasidharan) Temp removed WIP
+    // setCurrentPageData((currentPageData) => {
+    //   return Object.assign({}, currentPageData);
+    // });
   };
 
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(e)
   };
 
   return (
@@ -80,7 +81,7 @@ const Form = ({ formData }) => {
               );
           }
         })}
-      <button class="btn-submit" onClick={() => {if(!alert('Successfully submitted!')){window.location.reload();}}}>Submit</button>
+      <button className="btn-submit" onClick={() => {if(!alert('Successfully submitted!')){window.location.reload();}}}>Submit</button>
     </form>
   );
 };
